@@ -1,0 +1,6 @@
+services:
+  iris:
+    image: ${IMAGE_REF:?Set IMAGE_REF to a full image digest reference}
+    ports:
+      - "127.0.0.1:${HOST_PORT:-5000}:5000"
+    restart: unless-stopped
